@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+.main-container{
+    height: 100vh;
+    width: 100%;
+}
+form{
+    width: 40%;
+    height: 80%;
+    background-color: aqua;
+}
+.flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-colomn-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gap-1em{
+    gap: 1em;
+}

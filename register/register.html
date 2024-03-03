@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container flex-center-center">
+        <form>
+            <div class="flex-center-center">
+                <hr style="width: 50px;">
+                <h2>Register</h2>
+                <hr style="width: 50px;">
+            </div>
+            <P style="text-align: center;">Create your account. It's free and only takes a minute</P>
+
+            <div class="inputsfields flex-center-center flex-wrap gap-1em">
+                <input type="text" placeholder="First Name" style="height: 30px;width: 40%;">
+                <input type="text" placeholder="Last Name" style="height: 30px; width: 40%;">
+                <input type="email" placeholder="email address" style="height: 30px; width: 84%;">
+                <input type="password" placeholder="password" style="height: 30px; width: 84%;">
+                <input type="password" placeholder="confirm password" style="height: 30px; width: 84%;">
+            </div>
+            <input type="checkbox" style="width: 30%;">I accept the Terms of Use & Privacy Policy
+
+            <input type="submit" onclick="">
+            <br>
+    </div>
+
+
+
+
+    </form>
+    </div>
+    <script>
+        var score = 0;
+        questions = ["how old is kea?", "How old is Thapelo", "How old is Joel", "How old is Andile", "How old is Mary", "How old is Lethabo"];
+        answers = [27, 23, 25, 21, 17, 30];
+        function repeater() {
+            for (d = 0; d < 3; d++) {
+                var compu = Number(prompt(questions[d]))
+                if (compu == answers[d]) {
+                    alert("congrats");
+                }
+            }
+
+        }
+        var count = 0;
+        for (let i = 0; i < questions.length; i++) {
+            var comp = Number(prompt(questions[i]))
+            if (comp == answers[i]) {
+                alert("congradulations you scored a point")
+                score += 1;
+                alert(score);;
+            } else {
+                count += 1;
+                for (let s = count; s < 3; s++)
+                    if (comp == answers[i] && count < 3) {
+                        alert("atleast");
+                        score += 1;
+                        alert(score)
+
+                    } else {
+
+                        alert("sorry");
+                        var comp = Number(prompt(questions[i]))
+
+                    }
+                // repeater();
+
+            }
+
+
+
+            // repeater();
+
+            // repeater();
+
+        }
+        alert("your total score is :" + " " + score + " out of 10");
+
+
+    </script>
+
+</body>
+
+</html>

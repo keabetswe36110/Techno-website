@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+
+<body>
+    <script>
+        var questionsAnswers = [
+            { question: "what is the capital city of freestate?", answer: "Bloem" },
+            { question: "what is the capital city of limpopo?", answer: "polokwane" },
+            { question: "what is the capital city of western cape?", answer: "cape town" }
+        ]
+        var points = 0;
+        var counts =0;
+        function main() {
+            for (var i = 0; i < questionsAnswers.length; i++) {
+                var results = prompt(questionsAnswers[i].question);
+                if (results == questionsAnswers[i].answer) {
+                    alert("congradulations, you've scored a point..");
+                    points += 1;
+                    alert("your score is :" + points);
+                    prompt("press OK to move to the next question!");
+                    // count=0
+
+                } else {
+                    count +=1;
+                    alert("sorry ,wrong answer please try again");
+                    alert("number of tries"+count+"out of 3")
+                    var results = prompt(questionsAnswers[i].question);
+                    if (results == questionsAnswers[i]) {
+                        alert("congradulations, you've scored a point..");
+                        points += 1;
+                        alert("your score is :" + points);
+                        prompt("press OK to move to the next question!");
+                    }
+                    else {
+                        count +=1;
+                        alert("sorry ,wrong answer please try again");
+                        alert("number of tries"+count+"out of 3")
+                        var results = prompt(questionsAnswers[i].question);
+                        if (results == questionsAnswers[i]) {
+                            alert("congradulations, you've scored a point..");
+                            points += 1;
+                            alert("your score is :" + points);
+                            prompt("press OK to move to the next question!");
+                        }else{
+                            counts+=1;
+                            alert("sorry Game over we moving to the next question!!");
+                            alert("number of tries"+count+"out of 3")
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+
+        }
+        main();
+
+    </script>
+</body>
+
+</html>
